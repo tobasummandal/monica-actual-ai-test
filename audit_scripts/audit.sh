@@ -1,66 +1,70 @@
 #!/bin/bash
-# Sample audit: run each ADR's own Verify commands, log result
-cd /Users/tobasum/Downloads/g2c/monica-actual-ai-test
-RESULTS=/tmp/audit_results.md
-echo "# Sample Audit - 20 ADRs vs own verify commands" > "$RESULTS"
-echo "" >> "$RESULTS"
-echo "Branch: $(git rev-parse --abbrev-ref HEAD)" >> "$RESULTS"
-echo "" >> "$RESULTS"
+# Per-ADR audit worker. Designed to run INSIDE the laravelsail/php83-composer
+# container where php/composer/phpstan/phpunit are native.
+# Usage (inside container):
+#   ls docs/adr | xargs -P 8 -I {} bash audit_scripts/audit.sh "{}" > audit_scripts/audit.csv
+cd /var/www/html
+f="$1"
+[ -z "$f" ] && exit 1
+uuid=$(echo "$f" | cut -c1-36)
+title=$(head -1 "docs/adr/$f" | sed 's/^# //' | tr '|' '/')
 
-PASS=0; FAIL=0; SKIP=0
-while IFS= read -r f; do
-  uuid=$(echo "$f" | cut -c1-36)
-  title=$(head -1 "docs/adr/$f" | sed 's/^# //')
-  echo "" >> "$RESULTS"
-  echo "## $uuid" >> "$RESULTS"
-  echo "**$title**" >> "$RESULTS"
-  echo "" >> "$RESULTS"
+cmds=$(awk '/^Verify commands:/{flag=1;next} /^Accept when:/{flag=0} flag && /^- /{sub(/^- /,""); print}' "docs/adr/$f")
 
-  # Extract verify command lines (between "Verify commands:" and "Accept when:")
-  cmds=$(awk '/^Verify commands:/{flag=1;next} /^Accept when:/{flag=0} flag && /^- /{sub(/^- /,""); print}' "docs/adr/$f")
-  if [ -z "$cmds" ]; then
-    echo "_no verify commands_  → SKIP" >> "$RESULTS"
-    SKIP=$((SKIP+1))
+if [ -z "$cmds" ]; then
+  echo "$uuid|$title|0|0|0|0|NO_VERIFY|"
+  exit 0
+fi
+
+passed=0; failed=0; skipped=0; total=0; fail_cmds=""
+
+while IFS= read -r cmd; do
+  [ -z "$cmd" ] && continue
+  total=$((total+1))
+
+  # Detect first binary
+  first_bin=$(echo "$cmd" | sed -E 's/^[[:space:]]*[(){}!]*[[:space:]]*//' | awk '{print $1}')
+  first_bin=$(basename "$first_bin")
+
+  # Skip ONLY truly-missing binaries (mysql/psql/redis-cli/node/npm — not in this container)
+  if ! command -v "$first_bin" >/dev/null 2>&1; then
+    case "$first_bin" in
+      mysql|psql|redis-cli|node|npm|npx|yarn|pnpm)
+        skipped=$((skipped+1)); continue ;;
+    esac
+  fi
+
+  out=$(bash -c "$cmd" 2>/dev/null)
+  rc=$?
+
+  if echo "$cmd" | grep -qE 'grep -q[[:space:]]'; then
+    if [ "$rc" -eq 0 ]; then passed=$((passed+1)); else failed=$((failed+1)); fail_cmds="$fail_cmds; $cmd"; fi
     continue
   fi
 
-  # Extract accept thresholds (numeric, like "returns > 0", ">= 2")
-  accepts=$(awk '/^Accept when:/{flag=1;next} /^## /{flag=0} flag && /^- /{print}' "docs/adr/$f")
-
-  any_pass=0; any_fail=0
-  while IFS= read -r cmd; do
-    [ -z "$cmd" ] && continue
-    # run and capture numeric output (last line, often a wc -l count)
-    out=$(bash -c "$cmd" 2>/dev/null | tail -1)
-    echo "- \`$cmd\`" >> "$RESULTS"
-    echo "  → \`$out\`" >> "$RESULTS"
-    # crude: count > 0 = pass for "returns > 0" rules
-    n=$(echo "$out" | tr -d ' ' | grep -oE '[0-9]+' | head -1)
+  if echo "$cmd" | grep -qE 'wc -l[[:space:]]*$'; then
+    n=$(echo "$out" | tr -d ' \n' | grep -oE '[0-9]+' | head -1)
     if [ -n "$n" ] && [ "$n" -gt 0 ] 2>/dev/null; then
-      any_pass=1
+      passed=$((passed+1))
     else
-      any_fail=1
+      failed=$((failed+1)); fail_cmds="$fail_cmds; $cmd"
     fi
-  done <<< "$cmds"
-
-  echo "" >> "$RESULTS"
-  echo "Accept criteria:" >> "$RESULTS"
-  echo "$accepts" >> "$RESULTS"
-  echo "" >> "$RESULTS"
-
-  if [ $any_pass -eq 1 ] && [ $any_fail -eq 0 ]; then
-    echo "**Result: PASS** (all verify cmds returned >0)" >> "$RESULTS"
-    PASS=$((PASS+1))
-  elif [ $any_pass -eq 1 ] && [ $any_fail -eq 1 ]; then
-    echo "**Result: PARTIAL**" >> "$RESULTS"
-    FAIL=$((FAIL+1))
-  else
-    echo "**Result: FAIL** (verify cmds returned 0)" >> "$RESULTS"
-    FAIL=$((FAIL+1))
+    continue
   fi
-done < /tmp/sample20.txt
 
-echo "" >> "$RESULTS"
-echo "---" >> "$RESULTS"
-echo "## Summary: PASS=$PASS  FAIL/PARTIAL=$FAIL  SKIP=$SKIP  / 20" >> "$RESULTS"
-echo "PASS=$PASS FAIL=$FAIL SKIP=$SKIP"
+  stripped=$(echo "$out" | tr -d ' \t\n\r')
+  if [ -n "$stripped" ]; then
+    passed=$((passed+1))
+  else
+    failed=$((failed+1)); fail_cmds="$fail_cmds; $cmd"
+  fi
+done <<< "$cmds"
+
+runnable=$((passed+failed))
+if [ $runnable -eq 0 ]; then result=ALL_SKIPPED
+elif [ $failed -eq 0 ]; then result=PASS
+elif [ $passed -eq 0 ]; then result=FAIL
+else result=PARTIAL
+fi
+
+echo "$uuid|$title|$passed|$failed|$skipped|$total|$result|$fail_cmds"
