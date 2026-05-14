@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Mock-Based Unit Testing for External Service Dependencies in CI/CD Pipeline: Mock Expectations Verify
+
+## Policies
+
+1. Mock expectations SHOULD verify that external service methods are called with correct parameters and in the expected order

@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt CardDAV/WebDAV Protocol for External Contact Synchronization: Dav Backend Implementations
+
+## Policies
+
+1. DAV backend implementations MUST implement the IDAVBackend interface to ensure consistent protocol handling

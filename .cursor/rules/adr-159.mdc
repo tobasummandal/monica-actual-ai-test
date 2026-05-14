@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt HTTP Client Libraries for External API Integration: OAuth Authentication Flows
+
+## Policies
+
+1. OAuth authentication flows MUST utilize Laravel Socialite or equivalent OAuth client libraries

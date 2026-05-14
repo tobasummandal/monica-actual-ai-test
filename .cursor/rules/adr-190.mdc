@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Inertia.js with SSR for Frontend-Backend Integration: Custom Middleware Extending
+
+## Policies
+
+1. Custom middleware extending Inertia's base middleware MUST be placed in app/Http/Middleware/ and follow the naming convention Ensure[Feature][Condition].php

@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Domain-Driven Controller Organization for Journal Management: Each Distinct Entity
+
+## Policies
+
+1. Each distinct entity or concern within journal management (journals, posts, photos, metrics, slices of life) MUST have a dedicated controller class

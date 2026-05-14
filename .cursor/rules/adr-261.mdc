@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Internationalization (i18n) Language Files for Multi-Language Support: New Locales Maintain
+
+## Policies
+
+1. New locales SHOULD maintain structural parity with existing language files to ensure feature completeness across all supported languages

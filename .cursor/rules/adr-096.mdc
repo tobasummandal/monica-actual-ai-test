@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Standardize External API Integration with DAV Protocol and DTO Pattern: Viewhelper Classes Used
+
+## Policies
+
+1. ViewHelper classes SHOULD be used to prepare data for external API responses, separating presentation logic from business logic

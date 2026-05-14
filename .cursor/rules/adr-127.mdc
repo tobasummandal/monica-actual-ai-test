@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Quality Gates Pattern for Domain Service Layer Validation: Controllers Receiving Webhook
+
+## Policies
+
+1. Controllers receiving webhook or external API data SHOULD implement quality gates to verify payload structure and authentication before delegating to domain services

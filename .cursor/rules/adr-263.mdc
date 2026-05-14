@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Internationalization (i18n) Language Files for Multi-Language Support: Translation Files Use
+
+## Policies
+
+1. Translation files SHOULD use PHP array return structures for framework compatibility and easy key-value access

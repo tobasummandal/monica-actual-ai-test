@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt HTTP Client Libraries for External API Integration: Http Client Configurations
+
+## Policies
+
+1. HTTP client configurations SHOULD be externalized to configuration files or environment variables for different environments

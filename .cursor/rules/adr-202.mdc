@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Eloquent ORM Models as Standard Data Access Layer: Models Define Custom
+
+## Policies
+
+1. Models MAY define custom query scopes, accessors, and mutators for domain-specific data manipulation

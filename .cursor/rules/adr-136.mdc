@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Standardize Logging with Laravel Log Facade in DAV and Job Components: Davclient Service Classes
+
+## Policies
+
+1. DavClient service classes MUST log all external HTTP requests and responses at appropriate log levels (debug for success, warning/error for failures)

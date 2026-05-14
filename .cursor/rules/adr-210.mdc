@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Modular Architecture with Factory-Based Component Generation: Scheduled Tasks Defined
+
+## Policies
+
+1. Scheduled tasks MUST be defined in a centralized Schedule class that extends the framework's scheduling infrastructure

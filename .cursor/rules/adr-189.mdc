@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Inertia.js with SSR for Frontend-Backend Integration: Middleware Handling Stateful
+
+## Policies
+
+1. Middleware handling stateful requests SHOULD extend or integrate with Inertia's HandleInertiaRequests middleware to maintain consistent request/response patterns

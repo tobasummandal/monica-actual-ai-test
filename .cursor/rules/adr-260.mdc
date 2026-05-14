@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Internationalization (i18n) Language Files for Multi-Language Support: Locale Specific Formatting
+
+## Policies
+
+1. Locale-specific formatting rules (dates, numbers, currency) MAY be defined in dedicated format.php files per locale

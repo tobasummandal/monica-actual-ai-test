@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Inertia.js with SSR for Frontend-Backend Integration: Javascript Entry Points
+
+## Policies
+
+1. JavaScript entry points (app.js, ssr.js) MUST be located in resources/js/ directory following Laravel's standard asset organization

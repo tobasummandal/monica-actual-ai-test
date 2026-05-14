@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Standardize Unit and Feature Test Organization in CI/CD Pipeline: Domain Specific Tests
+
+## Policies
+
+1. Domain-specific tests SHOULD be organized in subdirectories reflecting the application's domain structure

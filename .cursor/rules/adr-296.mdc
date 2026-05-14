@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Standardize Authentication Middleware for Journal Management Controllers: Controllers Apply Authentication
+
+## Policies
+
+1. Controllers SHOULD apply authentication middleware in the constructor method to ensure all routes are protected by default

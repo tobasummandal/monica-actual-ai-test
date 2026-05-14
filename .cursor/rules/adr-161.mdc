@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Eloquent ORM Models as Standard Data Modeling Pattern: Models Not Contain
+
+## Policies
+
+1. Models MUST NOT contain business logic beyond data access concerns; complex business rules belong in service classes or domain objects

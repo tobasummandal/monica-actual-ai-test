@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt PHPUnit for Unit Testing in Domain-Driven Architecture: Test Suites Executable
+
+## Policies
+
+1. Test suites SHOULD be executable in CI/CD pipelines for automated verification

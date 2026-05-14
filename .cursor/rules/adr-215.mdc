@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Modular Architecture with Factory-Based Component Generation: Domain Modules Organized
+
+## Policies
+
+1. All domain modules MUST be organized under a clear namespace hierarchy following the pattern app/Domains/{Domain}/{Subdomain}/{Layer}

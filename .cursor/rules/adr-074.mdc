@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt CardDAV/WebDAV Protocol for External Contact Synchronization: Dav Client Services
+
+## Policies
+
+1. DAV client services SHOULD be organized under dedicated DavClient namespace to separate external integration concerns from core domain logic

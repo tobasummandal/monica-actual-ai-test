@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Inertia.js with SSR for Frontend-Backend Integration: Feature Gating Middleware
+
+## Policies
+
+1. Feature-gating middleware (e.g., EnsureSignupIsEnabled) SHOULD integrate with Inertia's response cycle to provide seamless redirects without breaking SPA navigation

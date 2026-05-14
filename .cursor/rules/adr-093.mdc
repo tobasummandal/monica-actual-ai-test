@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Standardize Password Hashing for Authentication Operations: Password Storage Operations
+
+## Policies
+
+1. All password storage operations MUST use Laravel's Hash facade or bcrypt hashing algorithm with appropriate cost factors

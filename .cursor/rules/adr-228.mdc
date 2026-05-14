@@ -1,0 +1,16 @@
+---
+globs: ["**/*Test.php", "**/*TestCase.php", "tests/**/*.php"]
+alwaysApply: false
+---
+
+# Standardize PHPUnit Test Structure with setUp and Trait-Based Helpers: Test Classes Extend
+
+## Policies
+
+1. Test classes MUST extend PHPUnit\Framework\TestCase or an appropriate base test class
+2. Test classes SHOULD use setUp() method for common initialization logic
+3. Test classes SHOULD leverage trait-based helpers for reusable test utilities
+4. Trait-based helpers MUST be prefixed with `Test` (e.g., `TestDatabaseHelpers`, `TestAuthHelpers`)
+5. setUp() method MUST call parent::setUp() as the first statement
+6. Test fixtures and mock objects SHOULD be initialized in setUp() rather than in individual test methods
+7. Trait-based helpers MUST NOT contain test methods (only utility methods)

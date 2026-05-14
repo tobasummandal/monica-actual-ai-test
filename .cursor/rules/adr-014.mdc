@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Domain-Driven Resource Modeling for Data Access Layer: Models Implement Additional
+
+## Policies
+
+1. Models MAY implement additional interfaces or traits to support cross-cutting concerns like auditing, soft deletes, or timestamps

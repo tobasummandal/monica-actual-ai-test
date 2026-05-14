@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Enforce Public API Contract Testing in CI/CD Pipeline: Teams Implement Contract
+
+## Policies
+
+1. Teams MAY implement contract testing frameworks (e.g., Pact, Spring Cloud Contract) for more sophisticated consumer-driven contract testing

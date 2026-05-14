@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Laravel Fortify for Authentication with Centralized Input Validation: Authentication Operations Registration
+
+## Policies
+
+1. All authentication operations (registration, login, password reset, profile updates) MUST be implemented using Laravel Fortify Actions

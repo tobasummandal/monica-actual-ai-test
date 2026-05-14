@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Mock-Based Unit Testing for External Service Dependencies in CI/CD Pipeline: Mock Objects Simulate
+
+## Policies
+
+1. Mock objects MUST simulate both success and failure scenarios for external service calls to ensure comprehensive error handling coverage

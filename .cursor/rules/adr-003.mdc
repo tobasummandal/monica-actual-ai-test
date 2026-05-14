@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Domain-Driven Service Layer Architecture for Business Operations: Service Classes Encapsulate
+
+## Policies
+
+1. Service classes SHOULD encapsulate a single business operation or use case to maintain single responsibility principle

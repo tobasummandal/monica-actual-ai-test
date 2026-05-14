@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Standardize Public API Contract Design with Interface-Based DTOs and Exception Handling: Public Components Implement
+
+## Policies
+
+1. All public API components MUST implement logging through standardized traits or interfaces (e.g., Loggable) for observability and debugging

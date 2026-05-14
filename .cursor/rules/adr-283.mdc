@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Organize Test Files by Domain and Feature Modules: Test Files Maintain
+
+## Policies
+
+1. Test files MUST maintain the same subdirectory structure within feature modules as production code (e.g., Services/, Web/ViewHelpers/, Api/Controllers/)

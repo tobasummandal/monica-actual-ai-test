@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt CardDAV/WebDAV Protocol for External Contact Synchronization: Contact Data Interchange
+
+## Policies
+
+1. Contact data interchange with external systems MUST use vCard format for import and export operations

@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Domain-Driven Resource Modeling for Data Access Layer: Domain Entities Represented
+
+## Policies
+
+1. All domain entities MUST be represented by dedicated model classes that encapsulate data structure and basic persistence logic

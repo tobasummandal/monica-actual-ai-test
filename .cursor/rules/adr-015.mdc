@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Domain-Driven Resource Modeling for Data Access Layer: Resource Transformation Logic
+
+## Policies
+
+1. Resource transformation logic (converting between domain models and external formats) SHOULD be encapsulated within dedicated resource classes

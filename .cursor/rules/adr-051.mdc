@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Standardize Laravel Fortify for Authentication Runtime: Feature Tests Authentication
+
+## Policies
+
+1. Feature tests for authentication flows SHOULD verify Fortify integration behavior to ensure runtime compatibility

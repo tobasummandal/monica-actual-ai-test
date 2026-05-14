@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Domain-Driven Service Layer Pattern for Journal Management: Web Controllers Managejournals
+
+## Policies
+
+1. Web controllers in the ManageJournals/Web/Controllers directory MUST delegate business logic to service classes rather than implementing logic directly

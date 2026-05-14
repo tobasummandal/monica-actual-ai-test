@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Laravel Fortify for Authentication with Centralized Input Validation: User Input Authentication
+
+## Policies
+
+1. All user input in authentication flows MUST be validated using Laravel's validation rules before processing

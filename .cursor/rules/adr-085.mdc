@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Domain-Driven DAV/CardDAV Integration Pattern for External Contact Synchronization: Data Transfer Between
+
+## Policies
+
+1. Data transfer between external DAV systems and internal domains MUST use dedicated DTO objects (ContactDto, ContactDeleteDto) to enforce boundary isolation

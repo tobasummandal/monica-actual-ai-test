@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Standardize Unit and Feature Test Organization in CI/CD Pipeline: Pipelines Execute Both
+
+## Policies
+
+1. CI/CD pipelines MUST execute both unit and feature test suites on every commit

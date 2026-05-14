@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Quality Gates Pattern for Domain Service Layer Validation: Quality Gates Validate
+
+## Policies
+
+1. Quality gates MUST validate data type correctness, required field presence, and business rule constraints at the earliest possible point in the execution flow

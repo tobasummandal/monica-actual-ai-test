@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Laravel Fortify for Authentication Action Standardization: Authentication Actions Password
+
+## Policies
+
+1. All authentication actions (password reset, password update, user creation) MUST be implemented as Laravel Fortify action classes in the app/Actions/Fortify namespace

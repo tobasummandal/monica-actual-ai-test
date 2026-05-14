@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Domain-Driven Service Layer Pattern for Journal Management: Services Composed Together
+
+## Policies
+
+1. Services MAY be composed together to implement complex workflows, but each service should remain independently testable

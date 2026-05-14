@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Laravel Fortify for Authentication with Centralized Input Validation: Authentication Logic Not
+
+## Policies
+
+1. Authentication logic MUST NOT be duplicated outside of Fortify Actions

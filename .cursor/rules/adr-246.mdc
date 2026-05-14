@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Inertia.js for Server-Driven Single Page Application Rendering: Controllers Not Mix
+
+## Policies
+
+1. Controllers MUST NOT mix Inertia responses with traditional view() responses in the same domain context

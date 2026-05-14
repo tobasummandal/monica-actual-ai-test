@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Standardize Public API Contract Design with Interface-Based DTOs and Exception Handling: Public Implement Versioning
+
+## Policies
+
+1. Public APIs MAY implement versioning strategies (URL path, header-based, or content negotiation) when backward compatibility cannot be maintained

@@ -1,0 +1,31 @@
+---
+globs: ["**/*.php"]
+alwaysApply: false
+---
+
+# ADR-198: Standardize Eloquent Models as Primary Data Access Layer with Public API Contracts
+
+## Context
+
+Eloquent Models serve as the primary data access layer in Laravel applications. To ensure consistency, maintainability, and clear contracts between layers, models must explicitly define their public APIs.
+
+## Decision
+
+Eloquent Models MUST define their public API contracts including fillable attributes, relationships, and accessor/mutator methods. This standardization ensures:
+
+- Clear boundaries between model responsibilities and consumer expectations
+- Explicit declaration of mass-assignable attributes
+- Documented relationships and computed properties
+- Reduced coupling and improved testability
+
+## Policies
+
+1. Models MUST define their public API contracts including fillable attributes, relationships, and accessor/mutator methods
+
+## Implementation Guidelines
+
+- Declare `$fillable` or `$guarded` properties explicitly
+- Document all public relationships with return type hints
+- Use accessors/mutators for computed or transformed properties
+- Keep model methods focused on domain logic
+- Use repositories or query builders for complex queries

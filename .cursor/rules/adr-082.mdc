@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Domain-Driven DAV/CardDAV Integration Pattern for External Contact Synchronization: Import Export Operations
+
+## Policies
+
+1. Import and export operations SHOULD be separated into distinct resource classes (ImportResource, ImportVCardResource) following single responsibility principle

@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Standardize Primary Datastore Access Patterns in Domain Services and Helpers: Domain Services View
+
+## Policies
+
+1. All domain services, view helpers, and background jobs MUST access primary datastores through well-defined repository patterns or ORM abstractions (e.g., Eloquent models)

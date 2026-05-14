@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Domain-Driven DAV/CardDAV Integration Pattern for External Contact Synchronization: Non Compliant Dav
+
+## Policies
+
+1. Non-compliant DAV server behaviors MUST be handled through explicit exception types (e.g., DavServerNotCompliantException) with clear error messaging

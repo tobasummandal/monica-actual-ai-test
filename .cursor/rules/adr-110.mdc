@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Standardize Public API Contract Design with Interface-Based DTOs and Exception Handling: Public Contracts Not
+
+## Policies
+
+1. Public API contracts SHOULD NOT expose internal domain models directly; always use DTOs or resource representations

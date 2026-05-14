@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Inertia.js for Server-Driven Single Page Application Rendering: Controllers Return Inertia
+
+## Policies
+
+1. Controllers MUST return Inertia responses using the Inertia::render() method with a component name and props array

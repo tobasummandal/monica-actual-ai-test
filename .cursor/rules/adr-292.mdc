@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt PHPUnit for Unit Testing in Domain-Driven Architecture: Unit Test Files
+
+## Policies
+
+1. Unit test files MUST be placed in tests/Unit/Domains/ directory structure mirroring the application domain hierarchy

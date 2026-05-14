@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Standardize Eloquent Models as Primary Data Access Layer with Public API Contracts: Database Entities Represented
+
+## Policies
+
+1. All database entities MUST be represented by Eloquent Model classes extending Illuminate\Database\Eloquent\Model
