@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Standardize Laravel Fortify for Authentication Runtime: Account Lifecycle Operations
+
+## Policies
+
+1. Account lifecycle operations (creation, cancellation, invitation acceptance) SHOULD integrate with Fortify's authentication context when user credentials are involved

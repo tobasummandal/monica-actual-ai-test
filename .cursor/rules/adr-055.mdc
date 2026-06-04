@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Domain-Driven Module Boundaries with External API Integration Layers: Integration Modules Include
+
+## Policies
+
+1. Integration modules MAY include utility classes for protocol-specific operations (e.g., Services/Utils/Dav) when needed for complex transformations

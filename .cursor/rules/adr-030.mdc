@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Mock-Based Unit Testing for External Service Dependencies in CI/CD Pipeline: Test Doubles Created
+
+## Policies
+
+1. Test doubles SHOULD be created using the testing framework's built-in mocking capabilities (e.g., PHPUnit mocks, Mockery) for consistency

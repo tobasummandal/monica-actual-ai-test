@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Standardize Laravel Fortify for Authentication Runtime: Password Validation Hashing
+
+## Policies
+
+1. Password validation and hashing MUST be handled exclusively by Fortify's built-in mechanisms

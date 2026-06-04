@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Organize Domain Logic Using Domain-Driven Design Bounded Contexts: Each Domain Separate
+
+## Policies
+
+1. Each domain MUST separate concerns into distinct subdirectories: Services for business logic, Web/Controllers for HTTP handling, and Models for data structures

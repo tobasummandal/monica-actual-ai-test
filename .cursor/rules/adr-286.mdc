@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Organize Test Files by Domain and Feature Modules: Test Files Organized
+
+## Policies
+
+1. Test files MUST be organized under tests/Unit/Domains/ following the same domain structure as production code

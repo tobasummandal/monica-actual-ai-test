@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Standardize Logging with Laravel Log Facade in DAV and Job Components: Log Statements Include
+
+## Policies
+
+1. Log statements SHOULD include structured context arrays with relevant identifiers (contact_id, addressbook_id, subscription_id) to enable log aggregation and filtering

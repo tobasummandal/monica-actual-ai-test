@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Laravel Migrations as Standard Database Schema Management: Direct Sql Schema
+
+## Policies
+
+1. Direct SQL schema modifications MUST NOT be performed on production databases outside of the migration system

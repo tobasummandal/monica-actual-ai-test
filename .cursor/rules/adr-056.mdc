@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Domain-Driven Module Boundaries with External API Integration Layers: Core Domain Entities
+
+## Policies
+
+1. Core domain entities and business logic MUST NOT directly depend on external protocol implementation classes or libraries

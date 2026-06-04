@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Organize Test Files by Domain and Feature Modules: Pipelines Implement Domain
+
+## Policies
+
+1. CI/CD pipelines MAY implement domain-specific test stages that execute only tests for changed domains

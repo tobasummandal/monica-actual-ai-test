@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Domain-Driven Module Boundaries with External API Integration Layers: External Specific Exceptions
+
+## Policies
+
+1. External API-specific exceptions SHOULD be defined within the integration module (e.g., DavServerNotCompliantException) to provide clear error boundaries

@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Enforce Authorization Checks at Controller Entry Points: Services That Can
+
+## Policies
+
+1. Services that can be invoked from multiple entry points SHOULD implement their own authorization checks to ensure defense-in-depth

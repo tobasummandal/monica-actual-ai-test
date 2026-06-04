@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt HTTP Client Libraries for External API Integration: Dav Caldav Carddav
+
+## Policies
+
+1. DAV/CalDAV/CardDAV protocol interactions MUST use Sabre DAV client libraries or equivalent standards-compliant implementations

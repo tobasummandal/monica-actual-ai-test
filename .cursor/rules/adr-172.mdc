@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Eloquent ORM Models as Standard Data Modeling Pattern: Models Define Casts
+
+## Policies
+
+1. Models SHOULD define casts for attributes that require type conversion (dates, JSON, booleans, etc.)

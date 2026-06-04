@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Laravel Fortify for Authentication with Centralized Input Validation: Services That Handle
+
+## Policies
+
+1. Services that handle user data SHOULD leverage validated data from Fortify Actions rather than implementing separate validation logic

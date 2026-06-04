@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Encrypted Secrets Management in CI/CD Pipeline: Secrets Rotation Policies
+
+## Policies
+
+1. Secrets rotation policies SHOULD be implemented with automated expiration and renewal mechanisms

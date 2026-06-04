@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Standardize External API Integration with DAV Protocol and DTO Pattern: Permission Validation External
+
+## Policies
+
+1. Permission validation for external API operations MUST throw specific permission exceptions (NotEnoughPermissionException) rather than generic authorization errors

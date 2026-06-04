@@ -4,7 +4,9 @@ These rules are ALWAYS ACTIVE for all data modeling and database access patterns
 
 ### Rules
 
-- **R-ELQ-001** MUST: All database entities MUST be represented by Eloquent Model classes extending `Illuminate\Database\Eloquent\Model`
+- **R-EDL-001** MUST: All database entities MUST be represented by Eloquent Model classes extending Illuminate\Database\Eloquent\Model
+
+### Scope
 
 **In scope:**
 - All persistent domain entities requiring database storage
@@ -24,49 +26,27 @@ These rules are ALWAYS ACTIVE for all data modeling and database access patterns
 - EXC-001: Performance profiling demonstrates that Eloquent overhead causes unacceptable latency (>100ms) for high-frequency queries
 - EXC-002: Complex analytical queries requiring database-specific features not supported by Eloquent query builder
 
-**Implementation guidance:**
-- Use Laravel model factories for test data generation to ensure consistency between tests and production models
-- Document all public methods, relationships, and custom attributes in PHPDoc blocks to establish clear API contracts
-- Leverage Laravel's `$casts` property to ensure consistent type handling for attributes (dates, booleans, JSON)
-- Consider using model events (creating, updating, etc.) for cross-cutting concerns like auditing rather than scattering logic across controllers
-- Use query scopes to encapsulate common filtering patterns and improve query readability
-
 ### Verify
 
 ```bash
-# Count models extending Eloquent Model base class
+# Count all model classes extending Eloquent Model
 grep -r "class.*extends.*Model" app/Models/ | wc -l
 
 # Check for syntax errors in model files
 find app/Models -name '*.php' -exec php -l {} \; | grep -v 'No syntax errors'
 
-# Count raw database queries outside Models directory
+# Count raw database queries outside models (should be minimal and documented)
 grep -r "DB::raw\|DB::select\|DB::statement" app/ --exclude-dir=Models | wc -l
 ```
 
 **Accept when:**
-- All model classes in `app/Models` extend `Illuminate\Database\Eloquent\Model`
+- All model classes in app/Models extend Illuminate\Database\Eloquent\Model
 - No syntax errors in model files and all models are loadable by PHP parser
 - Raw database queries outside models are documented with justification or count is below threshold (e.g., <5 instances)
+- All public methods, relationships, and custom attributes are documented in PHPDoc blocks
+- Model classes use $casts property for consistent type handling
+- Query scopes encapsulate common filtering patterns
 
 <enforcement>
-Claude Code MUST NOT skip or defer verification. Violations require documented justification referencing EXC-001 or EXC-002 exceptions.
-
-**Enforcement mechanisms:**
-- Automated static analysis in CI pipeline checking model inheritance
-- Code review checklist requiring justification for raw SQL queries
-- PHPStan or Psalm rules enforcing model conventions
-- Query monitoring in staging environment to detect N+1 problems
-
-**Violation handling:**
-- CI pipeline fails if models do not extend base Eloquent Model class
-- Code review blocks merge if raw SQL lacks documented justification
-- Performance regression tests fail if query counts exceed thresholds
-- Architecture review required for new data access patterns deviating from standard
-
-**Exception process:**
-1. Developer documents performance issue or technical constraint in ticket
-2. Technical lead reviews justification and approves exception
-3. Exception is documented in code comments with ticket reference
-4. Exception is logged in architecture decision log for future review
+Claude Code MUST NOT skip or defer verification. Automated static analysis in CI pipeline MUST check model inheritance. Code review MUST require justification for raw SQL queries. PHPStan or Psalm rules MUST enforce model conventions. Query monitoring in staging environment MUST detect N+1 problems. CI pipeline MUST fail if models do not extend base Eloquent Model class.
 </enforcement>

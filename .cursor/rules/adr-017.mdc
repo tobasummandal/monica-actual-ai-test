@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Domain-Driven Resource Modeling for Data Access Layer: Model Classes Organized
+
+## Policies
+
+1. Model classes SHOULD be organized by domain context (e.g., Contact, File) to maintain clear bounded contexts

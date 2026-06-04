@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Domain-Driven Test Organization with Mirrored Directory Structure: Domain Boundaries Reflected
+
+## Policies
+
+1. Domain boundaries MUST be reflected in the test directory structure, with tests organized under their respective domain and sub-domain directories

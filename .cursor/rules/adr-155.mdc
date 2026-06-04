@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt HTTP Client Libraries for External API Integration: External Integrations Wrapped
+
+## Policies
+
+1. External API integrations SHOULD be wrapped in service classes that encapsulate the HTTP client library usage

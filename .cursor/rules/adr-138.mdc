@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Standardize Logging with Laravel Log Facade in DAV and Job Components: Dav Backend Implementations
+
+## Policies
+
+1. All DAV backend implementations (CalDAV, CardDAV) MUST use Laravel's Log facade for recording synchronization events, errors, and state transitions

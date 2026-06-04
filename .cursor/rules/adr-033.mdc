@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Mock-Based Unit Testing for External Service Dependencies in CI/CD Pipeline: Unit Tests Services
+
+## Policies
+
+1. Unit tests for services that interact with external APIs or network resources MUST use mocks, stubs, or fakes instead of real connections

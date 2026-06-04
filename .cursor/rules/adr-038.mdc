@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Laravel Fortify for Authentication Action Standardization: Password Validation Hashing
+
+## Policies
+
+1. Password validation and hashing operations MUST use Laravel's Hash facade and validation rules to ensure consistent security standards across all deployment targets

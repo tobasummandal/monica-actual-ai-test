@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Use Laravel Hash Facade for Password Credential Storage: Applications Implement Automatic
+
+## Policies
+
+1. Applications MAY implement automatic password rehashing on login if the configured algorithm or work factor changes

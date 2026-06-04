@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Quality Gates Pattern for Domain Service Layer Validation: View Helpers That
+
+## Policies
+
+1. View helpers that transform domain data for presentation MUST validate the completeness and structure of input data before transformation

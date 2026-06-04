@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Standardize External API Integration with DAV Protocol and DTO Pattern: External Integrations Implement
+
+## Policies
+
+1. External API integrations SHOULD implement logging capabilities using traits (e.g., Loggable) for consistent observability across API interactions

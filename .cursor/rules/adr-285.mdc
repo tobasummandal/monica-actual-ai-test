@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Organize Test Files by Domain and Feature Modules: Each Domain Subdirectory
+
+## Policies
+
+1. Each domain subdirectory MUST contain feature module subdirectories that mirror the production code organization (e.g., ManageTemplates, ManageUserPreferences, ManageUsers)

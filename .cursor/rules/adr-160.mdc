@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt HTTP Client Libraries for External API Integration: External Http Communications
+
+## Policies
+
+1. All external HTTP API communications MUST use established HTTP client libraries rather than raw socket or curl implementations

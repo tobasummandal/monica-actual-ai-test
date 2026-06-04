@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Laravel Fortify for Authentication with Centralized Input Validation: Applications Customize Fortify
+
+## Policies
+
+1. Applications MAY customize Fortify's default behavior by providing custom Action implementations

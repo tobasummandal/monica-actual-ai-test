@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Encrypted Secrets Management in CI/CD Pipeline: Secrets Scoped Minimum
+
+## Policies
+
+1. Secrets SHOULD be scoped to the minimum required access level (environment, project, or organization)

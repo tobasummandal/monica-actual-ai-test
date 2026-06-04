@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Domain-Driven Service Layer Pattern for Journal Management: Business Logic Journal
+
+## Policies
+
+1. All business logic for journal management operations MUST be encapsulated in dedicated service classes within the app/Domains/Vault/ManageJournals/Services directory

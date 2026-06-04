@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Internationalization (i18n) Language Files for Multi-Language Support: Each Locale Provide
+
+## Policies
+
+1. Each locale MUST provide translation files for core categories: auth, validation, passwords, actions, pagination, http-statuses, and format

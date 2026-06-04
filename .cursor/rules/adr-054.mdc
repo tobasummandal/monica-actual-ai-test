@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Standardize Laravel Fortify for Authentication Runtime: Authentication Operations Password
+
+## Policies
+
+1. All authentication operations (password reset, password update, account creation) MUST use Laravel Fortify as the core authentication runtime library

@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Eloquent ORM Models as Standard Data Access Layer: Each Model Correspond
+
+## Policies
+
+1. Each model MUST correspond to a single database table with explicit or conventional table name mapping

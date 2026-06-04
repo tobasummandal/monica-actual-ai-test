@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Domain-Driven Module Boundaries with External API Integration Layers: Data Transfer Between
+
+## Policies
+
+1. Data transfer between external APIs and domain logic MUST use dedicated DTO (Data Transfer Object) classes located in Services/Utils/Model directories

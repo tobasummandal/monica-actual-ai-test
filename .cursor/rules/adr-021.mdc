@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Encrypted Secrets Management in CI/CD Pipeline: Pipeline Logs Not
+
+## Policies
+
+1. Pipeline logs MUST NOT expose secret values in output, error messages, or debug information

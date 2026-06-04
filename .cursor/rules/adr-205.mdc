@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Eloquent ORM Models as Standard Data Access Layer: Models Define Fillable
+
+## Policies
+
+1. Models SHOULD define fillable or guarded properties to control mass assignment protection

@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt PHPUnit for Unit Testing in Domain-Driven Architecture: Unit Tests Focus
+
+## Policies
+
+1. Unit tests MUST focus on testing individual components in isolation without external dependencies

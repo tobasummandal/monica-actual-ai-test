@@ -1,0 +1,24 @@
+---
+globs: ["**/*.php"]
+alwaysApply: false
+---
+
+# ADR 168: Adopt Eloquent ORM Models as Standard Data Modeling Pattern: Domain Entities That Map to Database Tables
+
+## Status
+Accepted
+
+## Context
+Domain entities that persist to relational databases require a consistent, framework-integrated approach to data modeling. Eloquent ORM provides Laravel's native abstraction for this concern.
+
+## Decision
+All domain entities that map to database tables MUST be represented as Eloquent Model classes extending Illuminate\Database\Eloquent\Model.
+
+## Consequences
+- **Positive**: Unified ORM layer, built-in query builder, relationship management, and Laravel ecosystem integration
+- **Positive**: Automatic timestamp management, soft deletes, and attribute casting
+- **Negative**: Tight coupling to Laravel framework; migration path to alternative ORMs requires refactoring
+- **Negative**: Active Record pattern may blur domain logic boundaries if not carefully architected
+
+## Compliance
+Code review must verify all persistent domain entities inherit from Eloquent Model and follow naming conventions (singular, PascalCase).

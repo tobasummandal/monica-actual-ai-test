@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Standardize Authentication Middleware for Journal Management Controllers: Authentication Middleware Configured
+
+## Policies
+
+1. Authentication middleware MUST be configured using the same authentication method pattern detected across JournalController, PostController, JournalPhotoController, PostPhotoController, JournalMetricController, PostMetricController, SliceOfLifeController, and PostSliceOfLifeController

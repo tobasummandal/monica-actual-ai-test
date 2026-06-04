@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Organize Domain Logic Using Domain-Driven Design Bounded Contexts: Service Classes Encapsulate
+
+## Policies
+
+1. Service classes MUST encapsulate single business operations with clear, action-oriented names (e.g., RemoveContactFromPost, UpdateJournalMetric)

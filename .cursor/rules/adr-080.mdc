@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Domain-Driven DAV/CardDAV Integration Pattern for External Contact Synchronization: Domain Services Implement
+
+## Policies
+
+1. Domain services MAY implement additional validation layers for VCard data to ensure compliance with RFC 6350 specifications

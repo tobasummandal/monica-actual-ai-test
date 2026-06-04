@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Standardize Password Hashing for Authentication Operations: Test Suites Verify
+
+## Policies
+
+1. Test suites SHOULD verify password hashing behavior in authentication feature tests

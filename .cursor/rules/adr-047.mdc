@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt PHP as Primary Backend Language for Laravel-Based Web Applications: Backend Application Code
+
+## Policies
+
+1. All backend application code MUST be written in PHP to ensure consistent runtime environment and deployment target compatibility

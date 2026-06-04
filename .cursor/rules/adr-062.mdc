@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Domain-Driven Module Boundaries with External API Integration Layers: Each External Integration
+
+## Policies
+
+1. Each external API integration MUST provide a dedicated client service layer (e.g., DavClient/Services) that encapsulates all protocol-specific communication logic

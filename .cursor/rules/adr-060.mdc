@@ -1,0 +1,10 @@
+---
+globs: ["**/*"]
+alwaysApply: false
+---
+
+# Adopt Domain-Driven Module Boundaries with External API Integration Layers: Backend Interfaces External
+
+## Policies
+
+1. Backend interfaces for external protocols MUST be defined as contracts (e.g., IDAVBackend) to enable multiple implementations and testing
